@@ -1,13 +1,13 @@
 <script>
-    import { storeInputValue } from "../store.js";
-
+	// @ts-nocheck
+	import { storeInputValue } from '../store.js';
 
 	let inputValue = '';
 	let displayValue = '';
 
 	function handleSubmit() {
 		if (inputValue.length > 0) {
-            storeInputValue.set(inputValue);
+			storeInputValue.set(inputValue);
 			storeInputValue.subscribe((value) => {
 				displayValue = value;
 			});
@@ -46,20 +46,9 @@
 	</div>
 	{#if displayValue}
 		<div class="select-none">
-            <p class="text-center">
-                Results for: <span class="text-lg font-bold text-teal-300 underline">{displayValue}</span>
-            </p>
-        </div>
+			<p class="text-center">
+				Results for: <span class="text-lg font-bold text-teal-300 underline">{displayValue}</span>
+			</p>
+		</div>
 	{/if}
 </div>
-
-<style>
-	/* Additional CSS code */
-	.glassmorphism {
-		background: rgba(250, 250, 250, 0.25);
-		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-		backdrop-filter: blur(20px);
-		-webkit-backdrop-filter: blur(20px);
-		border-radius: 10px;
-	}
-</style>
