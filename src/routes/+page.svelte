@@ -2,10 +2,10 @@
 // @ts-nocheck
 
 	// @ts-ignore
-	import Header from '../lib/components/Header.svelte';
+	import Header from '../Components/Header.svelte';
 	// @ts-ignore
-	import Results from '../lib/components/Results.svelte';
-	import { storeInputValue } from '../lib/store.js';
+	import Results from '../components/Results.svelte';
+	import { storeInputValue } from '../store.js';
 
 
 	let inputValue;
